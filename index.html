@@ -3,17 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的第一个 Codex 项目</title>
+  <title>极致硬核低价美股筛选器</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <main class="profile-card">
-    <p class="eyebrow">欢迎来到我的主页</p>
-    <h1>我的第一个 Codex 项目</h1>
-    <p class="intro">
-      这是一个简洁的个人主页，用来记录我开始使用 Codex 创建网页的第一步。
-    </p>
-    <a class="button" href="mailto:hello@example.com">联系我</a>
+  <main class="app-shell">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">最终候选股票代码</p>
+      <h1 id="page-title">极致硬核低价美股筛选器</h1>
+      <p class="hero-copy">
+        自动综合估值、成长、动量、波动风险与主题强度，为 demo 股票池生成硬核候选排序。
+      </p>
+      <p class="disclaimer">
+        Demo 数据仅用于演示，不是最新真实财务数据，不构成投资建议。
+      </p>
+    </section>
+
+    <section class="results-card" aria-labelledby="results-title">
+      <div class="section-heading">
+        <p class="label">Top 10</p>
+        <h2 id="results-title">页面加载后自动评分</h2>
+      </div>
+      <ol id="top-stocks" class="stock-list" aria-live="polite"></ol>
+    </section>
+
+    <section class="universe-card" aria-labelledby="universe-title">
+      <div class="section-heading">
+        <p class="label">Demo Universe</p>
+        <h2 id="universe-title">内置股票池</h2>
+      </div>
+      <div id="stock-universe" class="ticker-grid"></div>
+    </section>
   </main>
 </body>
 </html>
